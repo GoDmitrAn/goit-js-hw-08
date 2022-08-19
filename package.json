@@ -24,8 +24,25 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
     "parcel": "^2.6.0",
+    "parcel-plugin-custom-dist-structure": "^1.1.18",
     "parcel-reporter-clean-dist": "^1.0.4",
     "posthtml-include": "^1.7.4"
   },
-  "browserslist": "> 0.5%, last 2 versions, not dead"
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "customDistStructure": {
+    "config": {
+      ".js": "js",
+      ".css": "css",
+      "images": [
+        ".jpg",
+        ".png",
+        ".svg"
+      ],
+      ".fileExtension": "folder/in/dist",
+      "folder/in/dist": [ ".file", ".extensions" ]
+      },
+    "options": {
+      "development": true
+      }
+  }
 }

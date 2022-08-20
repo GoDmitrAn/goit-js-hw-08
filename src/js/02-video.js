@@ -4,7 +4,7 @@ let throttle = require('lodash.throttle');
 const iframe = document.querySelector('iframe');
 const player = new Player(iframe);
 setPlayerTime = localStorage.getItem("videoplayer-current-time") === ''
-    ? ''
+    ? 0
     : localStorage.getItem("videoplayer-current-time");
 
 player.setCurrentTime(setPlayerTime).then(function(seconds) {

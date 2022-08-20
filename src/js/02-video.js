@@ -3,7 +3,7 @@ let throttle = require('lodash.throttle');
 
 const iframe = document.querySelector('iframe');
 const player = new Player(iframe);
-const setPlayerTime = localStorage.getItem("videoplayer-current-time") === ''
+const setPlayerTime = localStorage.getItem("videoplayer-current-time") === null
     ? 0
     : localStorage.getItem("videoplayer-current-time");
 
@@ -20,7 +20,7 @@ player.setCurrentTime(setPlayerTime).then(function(seconds) {
 });
     
 
-const onPlay =throttle(function(data) {
+const onPlay = throttle(function(data) {
     
     localStorage.setItem("videoplayer-current-time",data.seconds)
     console.log(data.seconds);

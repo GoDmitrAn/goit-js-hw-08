@@ -1,1 +1,0 @@
-{"mappings":"YACA,IAAMA,EAASC,SAASC,MAAM,iBAC9BC,QAAQC,IAAIJ,EAAOK,S","sources":["src/js/03-feedback.js"],"sourcesContent":["\nconst formEl = document.forms['feedback-form'];\nconsole.log(formEl.elements)\n"],"names":["$b00c40859be242c5$var$formEl","document","forms","console","log","elements"],"version":3,"file":"03-feedback.65070db8.js.map"}

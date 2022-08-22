@@ -44,8 +44,12 @@ function handleSubmit(event) {
   if (email.value === "" || message.value === "") {
     return console.log("Please fill in all the fields!");
   }
-
-  console.log(`Email: ${email.value}, Message: ${message.value}`);
+    const userData = { 
+        'email': email.value,
+        'message':message.value
+    }
+    console.log("userData: ", userData)
+    
     event.currentTarget.reset();
     localStorage.clear();
 }
